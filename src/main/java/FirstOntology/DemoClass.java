@@ -7,9 +7,11 @@ package FirstOntology;
 
 /**
  *
+ IT Faculty domain
  * @author User
  */
 public class DemoClass {
+    
     public static void main(String[] args) {
         
     }
