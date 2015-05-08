@@ -7,7 +7,13 @@ package FirstOntology;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.vocabulary.OWL;
+import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.VCARD;
 
 /**
@@ -20,6 +26,7 @@ public class DemoClass {
     public static void main(String[] args) {
         
         Model facultyModel=ModelFactory.createDefaultModel();
+        
         
         // Uris
         
@@ -37,11 +44,28 @@ public class DemoClass {
        
         //Setting Properties
         ITDepartment.addProperty(VCARD.TITLE,"Department Of Information Technology");
-      
-        
+              
         CMDepartment.addProperty(VCARD.TITLE,"Department Of Computational Mathematics");
                
         ISDepartment.addProperty(VCARD.TITLE,"Department Of Interdiciplinary Studies");
+        
+        StmtIterator statementIterator=facultyModel.listStatements();
+        while(statementIterator.hasNext()){
+            Statement currentStatment=statementIterator.nextStatement();
+            Resource subject=currentStatment.getSubject();
+            Property predicate=currentStatment.getPredicate();
+            RDFNode object=currentStatment.getObject();
+            
+            System.out.println("Subject "+subject.toString());
+            System.out.println("Predicate "+predicate.toString());
+            if(object instanceof Resource){
+                System.out.println(object.toString());
+            }
+            else{
+                System.out.println("'"+object.toString()+"'");
+            }
+            System.out.println("\n\n");
+        }
         
         
         
