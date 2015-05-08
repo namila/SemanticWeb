@@ -29,7 +29,7 @@ public class DemoClass {
         String ISDepartmentUri="http://ITFaculty/Department/IS";
                
         // Resources
-        
+        System.out.println("Oks");
         //Departments
         Resource ITDepartment=facultyModel.createResource(ITDeapartmentUri);
         Resource CMDepartment=facultyModel.createResource(CMDepartmentUri);
