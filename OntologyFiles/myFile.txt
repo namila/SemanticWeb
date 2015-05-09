@@ -1,0 +1,3 @@
+<http://ITFaculty/Department/IS> <http://www.w3.org/2001/vcard-rdf/3.0#TITLE> "Department Of Interdiciplinary Studies" .
+<http://ITFaculty/Department/CM> <http://www.w3.org/2001/vcard-rdf/3.0#TITLE> "Department Of Computational Mathematics" .
+<http://ITFaculty/Department/IT> <http://www.w3.org/2001/vcard-rdf/3.0#TITLE> "Department Of Information Technology" .
