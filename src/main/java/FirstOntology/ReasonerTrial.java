@@ -25,12 +25,12 @@ import com.hp.hpl.jena.util.PrintUtil;
 public class ReasonerTrial {
     public static void main(String[] args) {
         
-        Model schema = FileManager.get().loadModel("E:\\Academics\\Level 4 Semister 1\\Semantic Web\\Ontologies\\SampleOntology\\owlDemoSchema.owl");
-        Model data = FileManager.get().loadModel("E:\\Academics\\Level 4 Semister 1\\Semantic Web\\Ontologies\\SampleOntology\\owlDemoData.rdf");
+        Model schema = FileManager.get().loadModel("/Volumes/MacOs/temp/faculty_rdf.owl");
+        Model data = FileManager.get().loadModel("/Volumes/MacOs/temp/instances.rdf");
         Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
         reasoner = reasoner.bindSchema(schema);
         InfModel infmodel = ModelFactory.createInfModel(reasoner, data);
-        Resource nForce = infmodel.getResource("urn:x-hp:eg/nForce");
+        Resource nForce = infmodel.getResource("http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Dr.Abc");
         System.out.println("nForce *:");
         printStatements(infmodel, nForce, null, null);
     }

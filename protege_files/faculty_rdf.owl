@@ -80,13 +80,31 @@
         <DataProperty IRI="#secondName"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Akila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ArtificialNeuralNetworks"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CM_Department"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ComputationalMathematics"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DataMining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Dr.Abc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr.Srilal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumanComputerInteraction"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#InformationTechnology"/>
@@ -104,13 +122,22 @@
         <NamedIndividual IRI="#Kasun"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MultiAgentSystems"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Namila"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Prof._Def"/>
+        <NamedIndividual IRI="#Prof.Def"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof.Karunananda"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SocialIt"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Staff"/>
@@ -125,12 +152,36 @@
         <Class IRI="#ItFaculty"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Akila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#ArtificialNeuralNetworks"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Department"/>
         <NamedIndividual IRI="#ComputationalMathematics"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#DataMining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Staff"/>
         <NamedIndividual IRI="#Dr.Abc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Dr.Srilal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#HumanComputerInteraction"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Department"/>
@@ -153,21 +204,93 @@
         <NamedIndividual IRI="#Kasun"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#MultiAgentSystems"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Student"/>
         <NamedIndividual IRI="#Namila"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Staff"/>
-        <NamedIndividual IRI="#Prof._Def"/>
+        <NamedIndividual IRI="#Prof.Def"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Prof.Karunananda"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Subject"/>
         <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#SocialIt"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#SocialIt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#MultiAgentSystems"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#HumanComputerInteraction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#Namila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#Akila"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#ArtificialNeuralNetworks"/>
+        <NamedIndividual IRI="#ComputationalMathematics"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isOffering"/>
         <NamedIndividual IRI="#ComputationalMathematics"/>
         <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#DataMining"/>
+        <NamedIndividual IRI="#InformationTechnology"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+        <NamedIndividual IRI="#SocialIt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+        <NamedIndividual IRI="#Akila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#HumanComputerInteraction"/>
+        <NamedIndividual IRI="#InformationTechnology"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasEnrolled"/>
@@ -176,9 +299,54 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#MultiAgentSystems"/>
+        <NamedIndividual IRI="#InformationTechnology"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
         <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
         <NamedIndividual IRI="#ComputationalMathematics"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#SocialIt"/>
+        <NamedIndividual IRI="#InterdiciplinaryStudies"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#Akila"/>
+        <Literal datatypeIRI="&xsd;string">Akila</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#secondName"/>
+        <NamedIndividual IRI="#Akila"/>
+        <Literal datatypeIRI="&xsd;string">Sandakelum</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#ArtificialNeuralNetworks"/>
+        <Literal datatypeIRI="&xsd;string">CM4323</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#DataMining"/>
+        <Literal datatypeIRI="&xsd;string">IN4312</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+        <Literal datatypeIRI="&xsd;string">Dehan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#secondName"/>
+        <NamedIndividual IRI="#DehanDeCroose"/>
+        <Literal datatypeIRI="&xsd;string">De Croose</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#HumanComputerInteraction"/>
+        <Literal datatypeIRI="&xsd;string">IN4212</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#firstName"/>
         <NamedIndividual IRI="#Kasun"/>
@@ -188,6 +356,11 @@
         <DataProperty IRI="#secondName"/>
         <NamedIndividual IRI="#Kasun"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Thennakoon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#MultiAgentSystems"/>
+        <Literal datatypeIRI="&xsd;string">CM4572</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#firstName"/>
@@ -203,6 +376,11 @@
         <DataProperty IRI="#hasSubjectCode"/>
         <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">CM4431</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#SocialIt"/>
+        <Literal datatypeIRI="&xsd;string">IS4521</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isOffering"/>
@@ -228,6 +406,13 @@
         <Class IRI="#ItFaculty"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMany"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasEnrolled"/>
+            <Class IRI="#Student"/>
+        </ObjectMaxCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isColleagueOf"/>
         <Class IRI="#Staff"/>
     </ObjectPropertyDomain>
@@ -275,6 +460,9 @@
         <DataProperty IRI="#secondName"/>
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSubjectCode"/>
+    </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty IRI="#firstName"/>
         <Class IRI="#Person"/>

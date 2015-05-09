@@ -21,6 +21,7 @@
         <rdfs:comment rdf:datatype="&xsd;string">This is the ontology describing the faculty of information technology , University of Moratuwa</rdfs:comment>
     </Ontology>
     
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -29,6 +30,32 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Akila -->
+
+    <NamedIndividual rdf:about="&FIT;Akila">
+        <rdf:type rdf:resource="&FIT;Student"/>
+        <FIT:firstName rdf:datatype="&xsd;string">Akila</FIT:firstName>
+        <FIT:secondName rdf:datatype="&xsd;string">Sandakelum</FIT:secondName>
+        <FIT:isColleagueOf rdf:resource="&FIT;DehanDeCroose"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;HumanComputerInteraction"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;MultiAgentSystems"/>
+        <FIT:isColleagueOf rdf:resource="&FIT;Namila"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;Semantic_web_and_ontological_modeling"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;SocialIt"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#ArtificialNeuralNetworks -->
+
+    <NamedIndividual rdf:about="&FIT;ArtificialNeuralNetworks">
+        <rdf:type rdf:resource="&FIT;Subject"/>
+        <FIT:hasSubjectCode rdf:datatype="&xsd;string">CM4323</FIT:hasSubjectCode>
+        <FIT:offeredBy rdf:resource="&FIT;ComputationalMathematics"/>
+    </NamedIndividual>
     
 
 
@@ -47,10 +74,51 @@
     
 
 
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#DataMining -->
+
+    <NamedIndividual rdf:about="&FIT;DataMining">
+        <rdf:type rdf:resource="&FIT;Subject"/>
+        <FIT:hasSubjectCode rdf:datatype="&xsd;string">IN4312</FIT:hasSubjectCode>
+        <FIT:offeredBy rdf:resource="&FIT;InformationTechnology"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#DehanDeCroose -->
+
+    <NamedIndividual rdf:about="&FIT;DehanDeCroose">
+        <rdf:type rdf:resource="&FIT;Student"/>
+        <FIT:secondName rdf:datatype="&xsd;string">De Croose</FIT:secondName>
+        <FIT:firstName rdf:datatype="&xsd;string">Dehan</FIT:firstName>
+        <FIT:isColleagueOf rdf:resource="&FIT;Akila"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;Semantic_web_and_ontological_modeling"/>
+        <FIT:hasEnrolled rdf:resource="&FIT;SocialIt"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Dr.Abc -->
 
     <NamedIndividual rdf:about="&FIT;Dr.Abc">
         <rdf:type rdf:resource="&FIT;Staff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Dr.Srilal -->
+
+    <NamedIndividual rdf:about="&FIT;Dr.Srilal">
+        <rdf:type rdf:resource="&FIT;Staff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#HumanComputerInteraction -->
+
+    <NamedIndividual rdf:about="&FIT;HumanComputerInteraction">
+        <rdf:type rdf:resource="&FIT;Subject"/>
+        <FIT:hasSubjectCode rdf:datatype="&xsd;string">IN4212</FIT:hasSubjectCode>
+        <FIT:offeredBy rdf:resource="&FIT;InformationTechnology"/>
     </NamedIndividual>
     
 
@@ -98,6 +166,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#MultiAgentSystems -->
+
+    <NamedIndividual rdf:about="&FIT;MultiAgentSystems">
+        <rdf:type rdf:resource="&FIT;Subject"/>
+        <FIT:hasSubjectCode rdf:datatype="&xsd;string">CM4572</FIT:hasSubjectCode>
+        <FIT:offeredBy rdf:resource="&FIT;InformationTechnology"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Namila -->
 
     <NamedIndividual rdf:about="&FIT;Namila">
@@ -108,9 +186,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Prof._Def -->
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Prof.Def -->
 
-    <NamedIndividual rdf:about="&FIT;Prof._Def">
+    <NamedIndividual rdf:about="&FIT;Prof.Def">
+        <rdf:type rdf:resource="&FIT;Staff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Prof.Karunananda -->
+
+    <NamedIndividual rdf:about="&FIT;Prof.Karunananda">
         <rdf:type rdf:resource="&FIT;Staff"/>
     </NamedIndividual>
     
@@ -122,6 +208,16 @@
         <rdf:type rdf:resource="&FIT;Subject"/>
         <FIT:hasSubjectCode>CM4431</FIT:hasSubjectCode>
         <FIT:offeredBy rdf:resource="&FIT;ComputationalMathematics"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#SocialIt -->
+
+    <NamedIndividual rdf:about="&FIT;SocialIt">
+        <rdf:type rdf:resource="&FIT;Subject"/>
+        <FIT:hasSubjectCode rdf:datatype="&xsd;string">IS4521</FIT:hasSubjectCode>
+        <FIT:offeredBy rdf:resource="&FIT;InterdiciplinaryStudies"/>
     </NamedIndividual>
 </rdf:RDF>
 
