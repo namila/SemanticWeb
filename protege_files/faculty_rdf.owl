@@ -26,16 +26,10 @@
         <Literal datatypeIRI="&xsd;string">This is the ontology describing the faculty of information technology , University of Moratuwa</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#ComputationalMathematics"/>
+        <Class IRI="#Degree"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Department"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#InformationTechnology"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#InterdisciplinaryStudies"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ItFaculty"/>
@@ -74,20 +68,50 @@
         <ObjectProperty IRI="#offeredBy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasSubjectCode"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="#ComputationalMathematics"/>
-        <Class IRI="#Department"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#InformationTechnology"/>
-        <Class IRI="#Department"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#InterdisciplinaryStudies"/>
-        <Class IRI="#Department"/>
-    </SubClassOf>
+    <Declaration>
+        <DataProperty IRI="#secondName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CM_Department"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComputationalMathematics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr.Abc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InformationTechnology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InterdiciplinaryStudies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#It"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Itm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kasun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Namila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Def"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Staff"/>
         <Class IRI="#Person"/>
@@ -97,14 +121,89 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#ComputationalMathematics"/>
-        <Class IRI="#InformationTechnology"/>
-        <Class IRI="#InterdisciplinaryStudies"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Department"/>
         <Class IRI="#ItFaculty"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#ComputationalMathematics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Dr.Abc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#InformationTechnology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#InterdiciplinaryStudies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Degree"/>
+        <NamedIndividual IRI="#It"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Degree"/>
+        <NamedIndividual IRI="#Itm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Kasun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Namila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Prof._Def"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Subject"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOffering"/>
+        <NamedIndividual IRI="#ComputationalMathematics"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEnrolled"/>
+        <NamedIndividual IRI="#Kasun"/>
+        <NamedIndividual IRI="#CM_Department"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#offeredBy"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+        <NamedIndividual IRI="#ComputationalMathematics"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#Kasun"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Kasun</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#secondName"/>
+        <NamedIndividual IRI="#Kasun"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Thennakoon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#Namila"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Namila</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#secondName"/>
+        <NamedIndividual IRI="#Namila"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Perera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectCode"/>
+        <NamedIndividual IRI="#Semantic_web_and_ontological_modeling"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CM4431</Literal>
+    </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isOffering"/>
         <ObjectProperty IRI="#offeredBy"/>
@@ -168,16 +267,48 @@
         <ObjectProperty IRI="#offeredBy"/>
         <Class IRI="#Department"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#firstName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#secondName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#firstName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSubjectCode"/>
         <Class IRI="#Subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#secondName"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
         <Class IRI="#ItFaculty"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="#firstName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasSubjectCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#secondName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
