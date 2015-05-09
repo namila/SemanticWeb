@@ -87,6 +87,10 @@ public class DisplayPanel extends javax.swing.JFrame {
                     myVector.add(elementCollection[j].split("#")[1]);
                 }
                 
+                else if(elementCollection[j].contains("http://www.w3.org/2001/XMLSchema#string")){
+                    myVector.add(elementCollection[j].substring(0,elementCollection[j].indexOf("http://www.w3.org/2001/XMLSchema#string")-2));
+                }
+                
                 else{
                     myVector.add(elementCollection[j]);
                 }
