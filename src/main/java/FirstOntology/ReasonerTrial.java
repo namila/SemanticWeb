@@ -6,6 +6,8 @@
 package FirstOntology;
 
 
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -23,25 +25,41 @@ import com.hp.hpl.jena.util.PrintUtil;
  * @author User
  */
 public class ReasonerTrial {
+
     public static void main(String[] args) {
+
+      printStatements("Namila");
+       
+    }
+
+    public static String printStatements(String resourceName) { 
+        Model schema = FileManager.get().loadModel("C:\\Users\\User\\Documents\\NetBeansProjects\\SemanticWebLatest\\SemanticWeb\\protege_files\\faculty_rdf.owl");
+        Model data = FileManager.get().loadModel("C:\\Users\\User\\Documents\\NetBeansProjects\\SemanticWebLatest\\SemanticWeb\\protege_files\\instances.rdf");
         
-        Model schema = FileManager.get().loadModel("/Volumes/MacOs/temp/faculty_rdf.owl");
-        Model data = FileManager.get().loadModel("/Volumes/MacOs/temp/instances.rdf");
         Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
         reasoner = reasoner.bindSchema(schema);
         InfModel infmodel = ModelFactory.createInfModel(reasoner, data);
-        Resource nForce = infmodel.getResource("http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#Dr.Abc");
-        System.out.println("nForce *:");
-        printStatements(infmodel, nForce, null, null);
+        Resource nForce = infmodel.getResource("http://www.semanticweb.org/tmkasun/ontologies/2015/4/FIT#"+resourceName);
+        Property currentProperty=null;
+        Resource currentResouce=null;
+        StringBuilder myStringBuilder=new StringBuilder();
+        
+        for (StmtIterator i = infmodel.listStatements(nForce, currentProperty, currentResouce); i.hasNext();) {
+            Statement stmt = i.nextStatement();
+            myStringBuilder.append(PrintUtil.print(stmt)+"\n");          
+        }
+        
+        String resultString=myStringBuilder.toString();
+        return resultString;
     }
 
-    private static void printStatements(Model infmodel, Resource nForce, Property object, Resource object0) {
-        
-        for (StmtIterator i = infmodel.listStatements(nForce,object,object0); i.hasNext(); ) {
-        Statement stmt = i.nextStatement();
-        System.out.println(" - " + PrintUtil.print(stmt));
-        
-    }
-  }
-    
+//    private static void printProperties(Model infmodel, Resource nForce) {
+//        StmtIterator myIterator = nForce.listProperties();
+//
+//        while (myIterator.hasNext()) {
+//            Statement currentStatement = myIterator.nextStatement();
+//            System.out.println(PrintUtil.print(currentStatement)+"\n\n");
+//        }
+//    }
+
 }
